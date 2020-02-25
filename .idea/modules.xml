@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MySQL Login &amp; Registration.iml" filepath="$PROJECT_DIR$/MySQL Login &amp; Registration.iml" group="MySQL Login &amp; Registration" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MySQL Login &amp; Registration/app" />
+    </modules>
+  </component>
+</project>

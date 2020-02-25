@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_map">
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.arsltech.developer.mysqlloginregistration.ui.slideshow.SlideshowFragment"
+        android:label="@string/map"
+        tools:layout="@layout/activity_maps" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.arsltech.developer.mysqlloginregistration.ui.home.HomeFragment"
+        android:label="@string/menu_book"
+        tools:layout="@layout/nearby">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.arsltech.developer.mysqlloginregistration.ui.home.HomeSecondFragment"
+        android:label="@string/menu_booking"
+        tools:layout="@layout/booking">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.arsltech.developer.mysqlloginregistration.ui.yourcars.GalleryFragment"
+        android:label="@string/menu_your_cars"
+        tools:layout="@layout/your_cars">
+    <action
+        android:id="@+id/action_to_add_your_vehilces"
+        app:destination="@id/nav_add_your_vehicles" />
+</fragment>
+    <fragment
+        android:id="@+id/nav_add_your_vehicles"
+        android:name="com.arsltech.developer.mysqlloginregistration.ui.yourcars.add_your_vehicles"
+        android:label="@string/menu_booking"
+        tools:layout="@layout/booking"/>
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.arsltech.developer.mysqlloginregistration.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_Shop"
+        tools:layout="@layout/auto_shop" />
+</navigation>
